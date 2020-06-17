@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Контакты</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            // предварительная загрузка изображений
+            var klgd = $('<img />').attr('src','images/klngr.png');
+            var msk = $('<img />').attr('src','images/msk.png');
+            var spb = $('<img />').attr('src','images/spb.png');
+            var chel = $('<img />').attr('src','images/chel.jpg');
+
+            $('div#imap > a').click(function(event){
+                var elId = $(this).attr('id');
+
+                switch(elId){
+                    case 'klgd' :
+                        $('#container:not(:has(img))').append(klgd);
+                        //elImgURI = img_props.klgd.uri;
+                        break;
+                    case 'spb' :
+                        $('#container:not(:has(img))').append(spb);
+                        //elImgURI = img_props.spb.uri;
+                        break;
+                    case 'msk' :
+                        $('#container:not(:has(img))').append(msk);
+                        //elImgURI = img_props.msk.uri;
+                        break;
+                    case 'chel' :
+                        $('#container:not(:has(img))').append(chel);
+                        //elImgURI = img_props.msk.uri;
+                        break;
+                    default: elImgURI = false;
+
+
+                }
+
+                // ширина контейнера
+                var contwidth = $('#container').width();
+                var contheight = $('#container').height();
+
+                var w_mrg = contwidth/2 + "px";
+                var h_mrg = contheight/2 + "px";
+
+                $('#container').show();
+                $('#container').css({'margin-left':'-'+w_mrg});
+                event.preventDefault();
+            });
+            $('div#container').click(function(event){
+                $('#container img').remove();
+                $('#container').hide();
+                event.preventDefault();
+            });
+
+        });
+
+    </script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-size:100%;
+            border-collapse:collapse;
+        }
+
+        body{
+            font-family:Arial;
+            position:relative;
+        }
+
+        /*��������� ��� �����*/
+        div#imap{
+            width:700px;
+            height:394px;
+            margin:0 auto 10px;
+            background:url(images/map_bg.png) no-repeat;
+            position:relative;
+        }
+
+        /*������ �� �����*/
+        div#imap a{
+            position:absolute;
+            text-decoration:none;
+            background:url(images/b_sprite.png) no-repeat;
+            color:#000;
+            font-weight:bold;
+            padding-left:14px;
+            font-size:.7em;
+        }
+
+        div#imap a:hover{
+            background-position:0 -13px;
+        }
+
+        /*����������� ���� � ������*/
+        div#container{
+            display:none;
+            position:absolute;
+            margin:0 auto;
+            background:#fff;
+            padding:10px;
+            border:1px solid #999;
+            cursor:pointer;
+            top:50%;
+            left:50%;
+        }
+
+        /*����� �����������*/
+        a#klgd{
+            top:75px;
+            left:30px;
+        }
+
+        /*����� �����-���������*/
+        a#spb{
+            top:97px;
+            left:95px;
+
+        }
+
+        /*����� ������*/
+        a#msk{
+            top:149px;
+            left:81px;
+        }
+        a#chel{
+            top:240px;
+            left:160px;
+
+        .js
+        .layer2 /* Стиль основного текста */
+        {
+            box-shadow: 7px 7px 5px rgba(0,0,0,0.6); /* Тень */
+            border-radius: 20px; /* Радиус скругления */
+            background: #dcdcdc;/* Цвет фона */
+            padding: 10px; /* Поля вокруг текста */
+            margin: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+<br class="layer2">
+    <p align="justify"> Челябинск ул Энтузиастов 22 </br> Москва ул Тверская 17</br> Санкт-петербург ул Невская 23 </br> Калининград ул Горького 15 </p></br> <a href="index.html" class="info">Переход на главную</a> </article>
+    </div>
+<div id="imap">
+    <a href="#" id="klgd">Калининград</a>
+    <a href="#" id="spb">Санкт-Петербург</a>
+    <a href="#" id="msk">Москва</a>
+    <a href="#" id="chel">Челябинск</a>
+</div>
+<div id="container"></div>
+</body>
+</html>
+

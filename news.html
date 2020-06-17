@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Новости</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Bootstr.css">
+    <script src="js.js"></script>
+    <script src="js2.js"></script>
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-md-12">
+            </div>
+        </div>
+        <style>
+            .row.content {height: 1500px}
+            .sidenav {
+                background-color: #f2f2f2;
+                height: 100%;
+            }
+            footer {
+                background-color: #545;
+                color: white;
+                padding: 16px;
+            }
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 16px;
+                }
+                .row.content {height: auto;}
+            }
+            .layer2 /* Стиль основного текста */
+            {
+                box-shadow: 7px 7px 5px rgba(0,0,0,0.6); /* Тень */
+                border-radius: 20px; /* Радиус скругления */
+                background: #dcdcdc;/* Цвет фона */
+                padding: 10px; /* Поля вокруг текста */
+                margin: 10px;
+
+            }
+            .wrapper {
+                position: relative;
+                padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+            }
+
+        </style>
+        </head>
+<body>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h4>Блог про Java</h4>
+            <ul class="nav nav-pills nav-stacked">
+ 		<li ><a href="index.html">Главная</a></li>
+                <li class="active"><a href="news.html">Новости</a></li>
+                <li><a href="история%20создания.html">История создания</a></li>
+                <li><a href="Контакты.html">Контакты</a></li>
+                <li><a href="vxod.html">Вход в аккаунт</a></li>
+                <li><a href="reg.html">Регистрация</a></li>
+            </ul><br>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Поиск">
+                <span class="input-group-btn">
+          <button ="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+        </span>
+            </div>
+        </div>
+        <header>
+            <h1 align="center"> <font color="orange">
+                Новости</h1>
+        </header>
+        <font color="black">
+            <div class = "col-sm-4">
+                <div class="layer2">
+                    <div class="wrapper" >
+                        <img src="images/11.png" alt="Фотография 1" >
+                    </div>
+                 <p align="justify">Первая новость</p>
+                    <p align="justify">Один из самых популярных языков программирования Java празднует двадцатипятилетний юбилей. Именно в эти дни стала доступна первая публичная версия платформы, которая впоследствии получила признание миллионов разработчиков со всего мира.</p>
+                </div>
+            </div>
+    </div>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162307401-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162307401-1', { 'optimize_id': 'GTM-W4BKFG2'});
+    </script>
+    <title>Java</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-md-12">
+            </div>
+        </div>
+        <style>
+            #subscribe,
+            #login{
+                position: absolute;
+                top: 0px;
+                width: 88%;
+                padding: 18px 6% 60px 6%;
+                margin: 0 0 35px 0;
+                background: rgb(247, 247, 247);
+                border: 1px solid rgba(147, 184, 189,0.8);
+                box-shadow:
+                        0pt 2px 5px rgba(105, 108, 109,  0.7),
+                        0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+                border-radius: 5px;
+            }
+            #login{
+                z-index: 22;
+            }
+            #wrapper h1{
+                font-size: 48px;
+                color: rgb(6, 106, 117);
+                padding: 2px 0 10px 0;
+                font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+                font-weight: bold;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+            /** На донный момент только webkit поддерживает background-clip:text; **/
+            #wrapper h1{
+                background:
+                        -webkit-repeating-linear-gradient(-45deg,
+                        rgb(18, 83, 93) ,
+                        rgb(18, 83, 93) 20px,
+                        rgb(64, 111, 118) 20px,
+                        rgb(64, 111, 118) 40px,
+                        rgb(18, 83, 93) 40px);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+
+            #wrapper h1:after{
+                content:' ';
+                display:block;
+                width:100%;
+                height:2px;
+                margin-top:10px;
+                background:
+                        linear-gradient(left,
+                        rgba(147,184,189,0) 0%,
+                        rgba(147,184,189,0.8) 20%,
+                        rgba(147,184,189,1) 53%,
+                        rgba(147,184,189,0.8) 79%,
+                        rgba(147,184,189,0) 100%);
+            }
+            .row.content {height: 1500px}
+            .sidenav {
+                background-color: #f2f2f2;
+                height: 100%;
+            }
+            footer {
+                background-color: #545;
+                color: white;
+                padding: 16px;
+            }
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 16px;
+                }
+                .row.content {height: auto;}
+            }
+            .layer2 /* Стиль основного текста */
+            {
+                box-shadow: 7px 7px 5px rgba(0,0,0,0.6); /* Тень */
+                border-radius: 20px; /* Радиус скругления */
+                background: #dcdcdc;/* Цвет фона */
+                padding: 10px; /* Поля вокруг текста */
+                margin: 10px;
+
+            }
+            .wrapper {
+                position: relative;
+                padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+            }
+            a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 5px 10px;
+                letter-spacing: 1px;
+                margin: 0 20px;
+                font-size: 24px;
+                font-family: 'Fredoka One', cursive;
+                transition: .3s ease-in-out;
+            }
+            .s6 {
+                color: #E7805E;
+                border-bottom: 1px dashed;
+            }
+            .s6:hover {border-bottom: 1px solid #9B8381;}
+        </style>
+        </head>
+<body>
+<div id="container_demo" >
+    <!-- спрятанный якорь, чтобы избежать прыжков http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+    <a class="hiddenanchor" id="tosubscribe"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+    <div id="wrapper">
+        <div id="login" class="animate form">
+            <form  action="mysuperscript.php" autocomplete="on">
+                <h1>Log in</h1>
+                <p>
+                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                </p>
+                <p>
+                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+                </p>
+                <p class="keeplogin">
+                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                    <label for="loginkeeping">Keep me logged in</label>
+                </p>
+                <p class="login button">
+                    <input type="submit" value="Login" />
+                </p>
+                <p class="change_link">
+                    Not a member yet ?
+                    <a href="#tosubscribe" class="to_subscribe">Join us</a>
+                </p>
+            </form>
+        </div>
+
+
+</div>
+</body>
+</html>
